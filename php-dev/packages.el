@@ -45,4 +45,5 @@
     :defer t
     :config
     (progn
+      (flycheck-mode 1)
       (flycheck-add-mode 'php 'web-mode))))
