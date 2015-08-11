@@ -37,7 +37,7 @@
   (use-package web-mode
     :defer t
     :mode
-    (("\\.php\\'" . web-mode))
+    (("\\.php$" . web-mode))
     ))
 
 (defun php-dev/init-flycheck ()
