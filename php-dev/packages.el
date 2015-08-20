@@ -36,6 +36,9 @@
 (defun php-dev/init-web-mode ()
   (use-package web-mode
     :defer t
+    :init
+    (setq-default indent-tabs-mode t)
+    (setq-default tab-width 4)
     :mode
     (("\\.php$" . web-mode))
     ))
