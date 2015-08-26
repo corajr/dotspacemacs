@@ -13,11 +13,11 @@
 ;; List of all packages to install and/or initialize. Built-in packages
 ;; which require an initialization must be listed explicitly in the list.
 (setq php-dev-packages
-    '(
-      php-mode
-      web-mode
-      flycheck
-      ))
+      '(
+        php-mode
+        web-mode
+        flycheck
+        ))
 
 ;; List of packages to exclude.
 (setq php-dev-excluded-packages '())
@@ -37,18 +37,14 @@
   (use-package web-mode
     :defer t
     :config
-	(defun my-php-mode-hook ()
-	  (setq-default indent-tabs-mode t)
-	  (setq-default tab-width 4))
-	(add-hook 'php-mode-hook 'my-php-mode-hook)
+    (defun my-web-mode-hook ()
+      (setq indent-tabs-mode t)
+      (setq tab-width 4))
+    (add-hook 'web-mode-hook 'my-web-mode-hook)
     :mode
     (("\\.php$" . web-mode))
     ))
 
-(defun php-dev/init-flycheck ()
-  (use-package flycheck
-    :defer t
-    :config
-    (progn
-      (flycheck-mode 1)
-      (flycheck-add-mode 'php 'web-mode))))
+(defun php-dev/post-init-flycheck ()
+  (with-eval-after-load 'flycheck
+    (flycheck-add-mode 'php 'web-mode)))

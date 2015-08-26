@@ -22,16 +22,12 @@
 ;; List of packages to exclude.
 (setq haskell-stack-excluded-packages '())
 
-(defun haskell-stack/init-haskell-mode ()
-    (use-package haskell-mode
-      :config
+(when (configuration-layer/layer-usedp 'haskell)
+  (defun haskell-stack/post-init-haskell-mode ()
       (setq-default haskell-process-type 'ghci
                     haskell-process-path-ghci "stack"
-                    haskell-process-args-ghci '("ghci"))))
-
-(defun haskell-stack/init-haskell-mode ()
-    (use-package haskell-cabal-mode
-      :config
+                    haskell-process-args-ghci '("ghci")))
+  (defun haskell-stack/post-init-haskell-cabal-mode ()
       (setq-default haskell-process-type 'ghci
                     haskell-process-path-ghci "stack"
                     haskell-process-args-ghci '("ghci"))))
