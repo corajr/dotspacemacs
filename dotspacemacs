@@ -29,6 +29,7 @@
      purescript
      python
      haskell
+     haskell-stack
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -185,7 +186,12 @@ layers configuration."
    [default default default italic underline success warning error])
  '(org-agenda-files (quote ("~/Dropbox/org")))
  '(org-default-notes-file "~/Dropbox/org/notes.org")
- '(ring-bell-function (quote ignore) t))
+ '(ring-bell-function (quote ignore) t)
+ '(safe-local-variable-values
+   (quote
+    ((haskell-process-args-ghci "ghci")
+     (haskell-process-path-ghci . "stack")
+     (haskell-process-type . ghci)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
