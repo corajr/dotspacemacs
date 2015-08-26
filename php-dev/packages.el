@@ -36,9 +36,11 @@
 (defun php-dev/init-web-mode ()
   (use-package web-mode
     :defer t
-    :init
-    (setq-default indent-tabs-mode t)
-    (setq-default tab-width 4)
+    :config
+	(defun my-php-mode-hook ()
+	  (setq-default indent-tabs-mode t)
+	  (setq-default tab-width 4))
+	(add-hook 'php-mode-hook 'my-php-mode-hook)
     :mode
     (("\\.php$" . web-mode))
     ))

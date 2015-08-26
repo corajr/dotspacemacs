@@ -27,7 +27,8 @@
      html
      php-dev
      purescript
-	 python
+     python
+     haskell
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
