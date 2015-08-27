@@ -30,6 +30,7 @@
      python
      haskell
      haskell-stack
+     tabs
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -184,6 +185,7 @@ layers configuration."
  '(ahs-inhibit-face-list nil)
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
+ '(css-indent-offset 2)
  '(org-agenda-files (quote ("~/Dropbox/org")))
  '(org-default-notes-file "~/Dropbox/org/notes.org")
  '(ring-bell-function (quote ignore) t)
