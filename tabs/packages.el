@@ -25,7 +25,8 @@
   (use-package smart-tabs-mode
     :config
     (smart-tabs-insinuate 'javascript)
-    ))
+    (add-hook 'js-mode-hook
+              (lambda () (setq indent-tabs-mode t)))))
 
 (defun tabs/init-guess-style ()
   (use-package guess-style
@@ -33,4 +34,4 @@
     (autoload 'guess-style-set-variable "guess-style" nil t)
     (autoload 'guess-style-guess-variable "guess-style")
     (autoload 'guess-style-guess-all "guess-style" nil t)
-    (add-hook 'javascript-mode-hook 'guess-style-guess-all)))
+    (add-hook 'css-mode-hook 'guess-style-guess-all)))
