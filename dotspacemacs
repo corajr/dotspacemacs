@@ -31,7 +31,7 @@
      scala
      haskell
      haskell-stack
-     tabs
+     ;; tabs
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -170,6 +170,7 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
+  (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -186,15 +187,15 @@ layers configuration."
  '(ahs-inhibit-face-list nil)
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
- '(css-indent-offset 2)
+ '(css-indent-offset 4)
  '(org-agenda-files (quote ("~/Dropbox/org")))
  '(org-default-notes-file "~/Dropbox/org/notes.org")
  '(ring-bell-function (quote ignore) t)
  '(safe-local-variable-values
    (quote
-    ((haskell-process-args-ghci "ghci")
-     (haskell-process-path-ghci . "stack")
-     (haskell-process-type . ghci)))))
+	((haskell-process-args-ghci "ghci")
+	 (haskell-process-path-ghci . "stack")
+	 (haskell-process-type . ghci)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
