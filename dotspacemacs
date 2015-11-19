@@ -31,6 +31,7 @@
      scala
      haskell
      haskell-stack
+     elm
      ;; tabs
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -188,14 +189,15 @@ layers configuration."
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(css-indent-offset 4)
+ '(haskell-literate-default (quote tex))
  '(org-agenda-files (quote ("~/Dropbox/org")))
  '(org-default-notes-file "~/Dropbox/org/notes.org")
  '(ring-bell-function (quote ignore) t)
  '(safe-local-variable-values
    (quote
-	((haskell-process-args-ghci "ghci")
-	 (haskell-process-path-ghci . "stack")
-	 (haskell-process-type . ghci)))))
+    ((haskell-process-args-ghci "ghci")
+     (haskell-process-path-ghci . "stack")
+     (haskell-process-type . ghci)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
