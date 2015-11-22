@@ -26,7 +26,7 @@
 (defun pyret/init-pyret ()
   "Initialize my extension"
   (use-package pyret
-    :mode "\\.arr\\'"
+    :mode ("\\.arr\\'" . pyret-mode)
     )
   )
 ;;
