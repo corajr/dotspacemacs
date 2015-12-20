@@ -29,10 +29,13 @@
      purescript
      python
      scala
-     haskell
+     (haskell :variables haskell-enable-shm-support t)
      haskell-stack
      elm
+     elm-fix
      pyret
+     ;; coq
+     cb-proof
      ;; tabs
      ;; (shell :variables
      ;;        shell-default-height 30
