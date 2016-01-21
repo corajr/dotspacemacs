@@ -16,7 +16,7 @@
       '(
         haskell-mode
         haskell-cabal-mode
-        ;; package names go here
+        shm
         ))
 
 ;; List of packages to exclude.
@@ -27,6 +27,13 @@
       (setq-default haskell-process-type 'ghci
                     haskell-process-path-ghci "stack"
                     haskell-process-args-ghci '("ghci")))
+
+  (spacemacs|use-package-add-hook shm
+    :post-config
+    (progn
+      (set-face-background 'shm-current-face "#eee8d5")
+      (set-face-background 'shm-quarantine-face "lemonchiffon")))
+
   (defun haskell-stack/post-init-haskell-cabal-mode ()
       (setq-default haskell-process-type 'ghci
                     haskell-process-path-ghci "stack"
