@@ -39,6 +39,8 @@ values."
      elm
      elm-fix
      pyret
+     javascript
+     react
      ;; cb-proof
      ;; (shell :variables
      ;;        shell-default-height 30
