@@ -33,14 +33,16 @@ values."
      html
      purescript
      python
-     scala
-     (haskell :variables haskell-enable-shm-support t)
+     ;; scala
+     haskell
+     ;; (haskell :variables haskell-enable-shm-support t)
      haskell-stack
      elm
      elm-fix
      pyret
      javascript
      react
+     ruby-on-rails
      ;; cb-proof
      ;; (shell :variables
      ;;        shell-default-height 30
