@@ -42,6 +42,8 @@ values."
      pyret
      javascript
      react
+     (ruby :variables ruby-version-manager 'rvm)
+     tty-format
      ruby-on-rails
      ;; cb-proof
      ;; (shell :variables
