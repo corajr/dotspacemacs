@@ -37,6 +37,7 @@ values."
      haskell
      ;; (haskell :variables haskell-enable-shm-support t)
      haskell-stack
+     idris
      elm
      elm-fix
      pyret
