@@ -18,6 +18,7 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     yaml
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -30,11 +31,13 @@ values."
      markdown
      osx
      org
+     ;; org-journal
      html
      purescript
      python
-     ;; scala
-     haskell
+     scala
+     ;; haskell
+     (haskell :variables haskell-completion-backend 'intero)
      ;; (haskell :variables haskell-enable-shm-support t)
      haskell-stack
      idris
@@ -44,9 +47,11 @@ values."
      pyret
      javascript
      react
+     go
      (ruby :variables ruby-version-manager 'rvm)
      tty-format
      ruby-on-rails
+     evil-multiedit
      ;; cb-proof
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -272,6 +277,7 @@ layers configuration. You are free to put any user code."
   (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
   (setq compilation-scroll-output 'first-error)
   (setq-default
+   ensime-startup-snapshot-notification t
    js-indent-level 2
    ;; js2-mode
    js2-basic-offset 2
