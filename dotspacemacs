@@ -54,6 +54,7 @@ values."
      (haskell :variables haskell-completion-backend 'intero)
      ;; (haskell :variables haskell-enable-shm-support t)
      idris
+     lua
      elm
      elm-fix
      pyret
