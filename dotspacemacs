@@ -337,6 +337,7 @@ you should place your code here."
   (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
   (setq compilation-scroll-output 'first-error)
   (setq-default
+   ensime-startup-notification t
    ensime-startup-snapshot-notification t
    js-indent-level 2
    ;; js2-mode
