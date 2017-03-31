@@ -46,6 +46,13 @@ values."
      osx
      org
      latex
+     emoji
+     (erc :variables
+          erc-server-list
+          '(("irc.freenode.net"
+             :port "6697"
+             :ssl t
+             :nick "corajr")))
      ;; org-journal
      html
      purescript
