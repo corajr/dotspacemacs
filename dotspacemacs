@@ -51,7 +51,7 @@ values."
      emoji
      (erc :variables
           erc-server-list
-          '(("irc.freenode.net"
+          '(("znc.luxury-gay.space"
              :port "6697"
              :ssl t
              :nick "corajr")))
