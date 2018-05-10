@@ -484,7 +484,7 @@ before packages are loaded."
     (interactive)
     (if (executable-find "eslint_d")
         (progn (call-process "eslint_d" nil "*ESLint Errors*" nil "--fix" buffer-file-name)
-                                        ;(revert-buffer t t t)
+               (revert-buffer t t t)
                )
       (message "ESLint_d not found.")))
   (add-hook 'js2-mode-hook (lambda () (add-hook 'after-save-hook 'eslintd-fix nil t)))
