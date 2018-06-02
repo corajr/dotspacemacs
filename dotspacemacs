@@ -55,6 +55,7 @@ This function should only modify configuration layer settings."
      org
      latex
      emoji
+     gpu
      (erc :variables
           erc-server-list
           '(("znc.luxury-gay.space"
@@ -69,7 +70,6 @@ This function should only modify configuration layer settings."
      ;; haskell
      (haskell :variables haskell-completion-backend 'intero)
      ;; (haskell :variables haskell-enable-shm-support t)
-     find-iname
      idris
      lua
      elm
